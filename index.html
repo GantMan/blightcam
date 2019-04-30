@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f0eefb">
+    <title>Blight Cam</title>
+    <script defer src="lib/tfjs@0.11.7.js"></script>
+    <script defer src="lib/mobilenet@0.1.1.js"></script>
+    <script defer src="index.js"></script>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+  </head>
+  <body>
+    <div class="page page-intro" id="page-intro">
+      <h1>Blight Cam</h1>
+      <h2>Detect people and vehicles on blighted property.</h2>
+      <h1 id="houseicon">🏚</h1>
+      <div id="unsupported" class="unsupported">
+        <p id="error-msg" class="error"></p>
+        <p class="error">Sorry, your web browser does not appear to support webcam blight detection
+          Please try in another browser.</p>
+      </div>
+      <div id="supported" class="supported">
+        <button id="btn-go" class="btn-go">Begin</button>
+      </div>
+    </div>
+    <div class="page page-detector hidden" id="page-detector">
+        <div class="intruder-border"></div>
+        <p class="top-msg loading-msg">Warming up...</p>
+        <p class="top-msg detecting-msg">Watching property...</p>
+        <p class="top-msg intruder-msg">PERSON DETECTED! ⚠️</p>
+        <p class="top-msg vehicle-msg">VEHICLE DETECTED! 🚗</p>
+        <p class="bottom-msg intruder-msg">ALERT THE AUTHORITIES</p>
+        <video id="video" autoplay/>
+      </div>
+  </body>
+</html>

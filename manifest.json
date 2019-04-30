@@ -1,0 +1,21 @@
+{
+  "name": "Blight Cam",
+  "short_name": "BlightCam",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f0eefb",
+  "theme_color": "#f0eefb",
+  "description": "Detect people on blighted property",
+  "icons": [
+    {
+      "src": "images/homescreen-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/homescreen-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
